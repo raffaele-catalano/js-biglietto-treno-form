@@ -6,4 +6,26 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: brown;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 80px;
+    box-shadow: 1px 1px 1px rgba(63, 63, 63, 0.5);
 }

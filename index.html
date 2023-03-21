@@ -9,7 +9,7 @@
     <!-- font awesome  -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous'/>
     <!-- bootstrap -->
-    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css' integrity='sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==' crossorigin='anonymous'/> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css' integrity='sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==' crossorigin='anonymous'/>
     <!-- favicon -->
     <link rel="icon" href="assets/img/ticket-favicon.ico" type="ico">
     <!-- css -->
@@ -19,8 +19,45 @@
 
 <body>
     
+    <main>
+        
+        <div class="wrapper">
 
-    <h1>ciao</h1>
+            <h1>CALCOLA IL PREZZO DEL TUO TICKET</h1>
+            <!-- PRICE CALCULATOR -->
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col">
+                        <input id="name" class="w-100" type="text" placeholder="Inserisci il tuo Nome">
+                    </div>
+                    <!-- <div class="col">
+                        <input id="surname" class="w-100" type="text" placeholder="Inserisci il tuo Cognome">
+                    </div> -->
+                    <div class="col">
+                        <input id="distance" class="w-100" type="number" placeholder="Inserisci i Km">
+                    </div>
+                    <div class="col">
+                        <select name="age" id="ageSelect">
+                            <option value="minorenne">Minorenne</option>
+                            <option selected value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over 65</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="btnSend">Invia</button>
+            </div>
+
+            <!-- TICKET -->
+            <h1>IL TUO TICKET</h1>
+            <div class="container">
+                ciao
+            </div>
+
+        </div>
+            
+        
+    </main>
 
 
 
