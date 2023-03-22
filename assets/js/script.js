@@ -4,14 +4,11 @@ console.log("carrozza", carrozzaAssegnata);
 let codicePrenotazione = Math.floor(Math.random() * (99000 - 10000 + 1) ) + 99000;
 console.log("codice", codicePrenotazione);
 
-// let vedoTesto = true;
-
 const prezzoKm = 0.21;
 const under18 = 20;
 const over65 = 40;
 
 const submit = document.getElementById('btnSend')
-    // console.log(submit);
 
 submit.addEventListener('click', function(){
     const firstName = document.getElementById("name").value;
@@ -20,7 +17,6 @@ submit.addEventListener('click', function(){
     const discount = document.getElementById("ageSelect").value;
 
     let standardPrice = distance * prezzoKm;
-    // console.log(standardPrice);
 
     if (discount === "minorenne") {
         finalPrice = standardPrice *= 1 - (under18 / 100);
@@ -35,10 +31,6 @@ submit.addEventListener('click', function(){
         finalPrice = finalPrice.toFixed(2)
         console.log("prezzo standard",finalPrice);
     }
-
-    // const hiding = document.querySelector("wrapper");
-    // hiding.classList.remove("hide");
-    
 
     const fullnameOutput = document.getElementById('nome_completo');
     const fullName = firstName + " " + surname;
