@@ -10,15 +10,15 @@ const prezzoKm = 0.21;
 const under18 = 20;
 const over65 = 40;
 
-const firstName = document.getElementById("name").value;
-const surname = document.getElementById("surname").value;
-const distance = document.getElementById("distance").value;
-const discount = document.getElementById("ageSelect").value;
-
 const submit = document.getElementById('btnSend')
     // console.log(submit);
 
 submit.addEventListener('click', function(){
+    const firstName = document.getElementById("name").value;
+    const surname = document.getElementById("surname").value;
+    const distance = document.getElementById("distance").value;
+    const discount = document.getElementById("ageSelect").value;
+
     let standardPrice = distance * prezzoKm;
     // console.log(standardPrice);
 
@@ -52,14 +52,15 @@ submit.addEventListener('click', function(){
 
     document.getElementById('numero_carrozza').innerHTML = carrozzaAssegnata;
     document.getElementById('codice_prenotazione').innerHTML = codicePrenotazione;
-})
 
-btnReset.addEventListener('click', function() {
+    btnReset.addEventListener('click', function() {
     firstName.value = ''
     surname.value = ''
     distance.value = ''
     discount.value = ''
     document.querySelector('.bottom').classList.add('hide');
+})
+
 })
 
 
