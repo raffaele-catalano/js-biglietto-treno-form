@@ -29,11 +29,93 @@ h2 {
 .container {
     margin: 0 auto;
     width: 80%;
-    height: 200px;
+    height: 250px;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 80px;
     box-shadow: 1px 1px 1px rgba(63, 63, 63, 0.5);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    text-align: center;
+    padding: 30px;
+}
+
+.container label,
+.container select,
+.container input{
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.container select,
+.container input {
+    border: 1px solid brown;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container select:focus,
+.container input:focus {
+    background: brown;
+    color: white;
+} 
+
+.btn {
+    padding: 5px 10px;
+    border: 1px solid brown;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: brown;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.ticket {
+    border-radius: 5px ;
+    text-align: left;
+    color: black;
+}
+
+.ticket-area .row {
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.ticket-area .col {
+    padding: 0;
+}
+
+.name_box {
+    background-color: lightgray;
+    padding: 10px 10px 100px 10px;
+    text-align: left;
+}
+
+table {
+    margin-left: 20px;
+}
+
+table td,
+table th {
+    text-align: left;
+    min-width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
 }
 
 .hide {

@@ -1,7 +1,7 @@
-let carrozzaAssegnata = Math.floor(Math.random() * 21);
+let carrozzaAssegnata = Math.ceil(Math.random() * 12);
 console.log("carrozza", carrozzaAssegnata);
 
-let codicePrenotazione = Math.floor(Math.random() * 1001) + 1000;
+let codicePrenotazione = Math.floor(Math.random() * (99000 - 10000 + 1) ) + 99000;
 console.log("codice", codicePrenotazione);
 
 // let vedoTesto = true;
@@ -41,28 +41,26 @@ submit.addEventListener('click', function(){
     
 
     const fullnameOutput = document.getElementById('nome_completo');
-    const fullName = "Cliente:" + " " + firstName + " " + surname;
+    const fullName = firstName + " " + surname;
     fullnameOutput.innerHTML = fullName;
 
     const ultimatePrice = document.getElementById('prezzo_finale');
-    const ultimateFinalPrice = "Prezzo Finale:" + " " + finalPrice + " " + "&euro;"
+    const ultimateFinalPrice = finalPrice + " " + "&euro;"
     ultimatePrice.innerHTML = ultimateFinalPrice;
 
+    document.querySelector('.bottom').classList.remove('hide');
 
-    // else{
-    // hiding.classList.remove('hide');
-    // }
-    // vedoTesto = !vedoTesto;
-
-    document.getElementById('numero_carrozza').innerHTML = "Carrozza Assegnata:" + " " + carrozzaAssegnata;
-    document.getElementById('codice_prenotazione').innerHTML = "Codice Prenotazione:" + " " + codicePrenotazione;
+    document.getElementById('numero_carrozza').innerHTML = carrozzaAssegnata;
+    document.getElementById('codice_prenotazione').innerHTML = codicePrenotazione;
 })
 
-// function myFunction() {
-//     document.getElementById("info_ticket").reset();
-// }
-
-
+btnReset.addEventListener('click', function() {
+    firstName.value = ''
+    surname.value = ''
+    distance.value = ''
+    discount.value = ''
+    document.querySelector('.bottom').classList.add('hide');
+})
 
 
 

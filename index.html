@@ -9,7 +9,7 @@
     <!-- font awesome  -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous'/>
     <!-- bootstrap -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css' integrity='sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==' crossorigin='anonymous'/>
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.css' integrity='sha512-bR79Bg78Wmn33N5nvkEyg66hNg+xF/Q8NA8YABbj+4sBngYhv9P8eum19hdjYcY7vXk/vRkhM3v/ZndtgEXRWw==' crossorigin='anonymous'/> -->
     <!-- favicon -->
     <link rel="icon" href="assets/img/ticket-favicon.ico" type="ico">
     <!-- css -->
@@ -21,54 +21,101 @@
     
     <main>
         
-        <div class="wrapper">
+        <div class="main-wrapper">
 
             <h1>CALCOLA IL PREZZO DEL TUO TICKET</h1>
             <!-- PRICE CALCULATOR -->
-            <div id="info_ticket" class="container py-4">
-                <div class="row ms-5">
+            <div id="info_ticket" class="container top">
+                <div class="row">
 
                     <div class="col">
-                        <input id="name" class="p-1" type="text" placeholder="Inserisci il Nome">
+                        <label for="Nome">Nome</label>
+                        <input id="name" type="text" placeholder="Inserisci il Nome">
                     </div>
 
                     <div class="col">
-                        <input id="surname" class="p-1" type="text" placeholder="Inserisci il Cognome">
+                        <label for="Cognome">Cognome</label>
+                        <input id="surname" type="text" placeholder="Inserisci il Cognome">
                     </div>
 
                     <div class="col">
-                        <input id="distance" class="p-1" type="number" placeholder="Inserisci i Km">
+                        <label for="Km da Percorrere">Km da Percorrere</label>
+                        <input id="distance" type="number" placeholder="Inserisci i Km">
                     </div>
                 
                     <div class="col">
+                        <label for="Fascia Età">Fascia Età</label>
                         <select name="age" id="ageSelect" class="p-1">
+                            <option selected value="default">Seleziona la Fascia</option>
                             <option value="minorenne">Minorenne</option>
-                            <option selected value="maggiorenne">Maggiorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
                             <option value="over65">Over 65</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="buttons d-flex justify-content-center align-items-end">
-                    <input id="btnSend" class="p-1 mt-5" type="button" value="Checkout">
-                    <!-- <button id="btnSend">Invia</button> -->
+                <div class="row">
+                    <div class="col">
+                        <button id="btnSend" class="btn">Genera</button>
+                    </div>
+                    <div class="col">
+                        <button id="btnReset" class="btn">Annulla</button>
+                    </div>
                 </div>
-                <!-- <input type="button" onclick="myFunction()" value="Resetta"> -->
+
+                <!-- <div class="buttons d-flex justify-content-center align-items-end">
+                    <input id="btnSend" class="p-1 mt-5" type="button" value="Checkout">
+                </div> -->
             </div>
 
             <!-- TICKET -->
-            <div class="wrapper">
-                <h2>IL TUO TICKET</h2>
-                <div class="container bottom d-flex justify-content-center align-items-center">
-                    <ul class="list-unstyled">
-                    <li id="nome_completo"></li>
-                    <li id="prezzo_finale"></li>
-                    <li id="numero_carrozza"></li>
-                    <li id="codice_prenotazione"></li>
-                    </ul>
-                    
-                </div>
+            <div class="container bottom hide">
+                <section class="ticket-area">
+                    <h1>IL TUO TICKET</h1>
+                    <div class="ticket">
+                        <div class="row">
+                            <h2>Dettaglio Passeggero</h2>
+                            <div class="col">
+                                <div class="name_box">
+                                    <h3>Nome Passeggero</h3>
+                                    <h4 id="nome_completo"></h4>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Offerta</th>
+                                            <th>Carrozza</th>
+                                            <th>CP</th>
+                                            <th>Prezzo Finale</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Under</td>
+                                            <td id="numero_carrozza"></td>
+                                            <td id="codice_prenotazione"></td>
+                                            <td id="prezzo_finale"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+
+            
+            
+                <!-- <ul class="list-unstyled">
+                <li id="nome_completo"></li>
+                <li id="prezzo_finale"></li>
+                <li id="numero_carrozza"></li>
+                <li id="codice_prenotazione"></li>
+                </ul> -->
+                    
+
             
 
         </div>
