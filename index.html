@@ -25,19 +25,23 @@
 
             <h1>CALCOLA IL PREZZO DEL TUO TICKET</h1>
             <!-- PRICE CALCULATOR -->
-            <div class="container py-4">
-                <div class="row">
+            <div id="info_ticket" class="container py-4">
+                <div class="row ms-5">
+
                     <div class="col">
-                        <input id="name" class="w-100" type="text" placeholder="Inserisci il tuo Nome">
+                        <input id="name" class="p-1" type="text" placeholder="Inserisci il Nome">
                     </div>
-                    <!-- <div class="col">
-                        <input id="surname" class="w-100" type="text" placeholder="Inserisci il tuo Cognome">
-                    </div> -->
+
                     <div class="col">
-                        <input id="distance" class="w-100" type="number" placeholder="Inserisci i Km">
+                        <input id="surname" class="p-1" type="text" placeholder="Inserisci il Cognome">
                     </div>
+
                     <div class="col">
-                        <select name="age" id="ageSelect">
+                        <input id="distance" class="p-1" type="number" placeholder="Inserisci i Km">
+                    </div>
+                
+                    <div class="col">
+                        <select name="age" id="ageSelect" class="p-1">
                             <option value="minorenne">Minorenne</option>
                             <option selected value="maggiorenne">Maggiorenne</option>
                             <option value="over65">Over 65</option>
@@ -45,14 +49,27 @@
                     </div>
                 </div>
 
-                <button id="btnSend">Invia</button>
+                <div class="buttons d-flex justify-content-center align-items-end">
+                    <input id="btnSend" class="p-1 mt-5" type="button" value="Checkout">
+                    <!-- <button id="btnSend">Invia</button> -->
+                </div>
+                <!-- <input type="button" onclick="myFunction()" value="Resetta"> -->
             </div>
 
             <!-- TICKET -->
-            <h1>IL TUO TICKET</h1>
-            <div class="container">
-                ciao
+            <div class="wrapper">
+                <h2>IL TUO TICKET</h2>
+                <div class="container bottom d-flex justify-content-center align-items-center">
+                    <ul class="list-unstyled">
+                    <li id="nome_completo"></li>
+                    <li id="prezzo_finale"></li>
+                    <li id="numero_carrozza"></li>
+                    <li id="codice_prenotazione"></li>
+                    </ul>
+                    
+                </div>
             </div>
+            
 
         </div>
             

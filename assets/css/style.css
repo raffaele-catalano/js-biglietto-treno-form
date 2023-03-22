@@ -15,6 +15,12 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .wrapper {
     margin: 0 auto;
     margin-top: 50px;
@@ -28,4 +34,8 @@ h1 {
     border-radius: 15px;
     margin-bottom: 80px;
     box-shadow: 1px 1px 1px rgba(63, 63, 63, 0.5);
+}
+
+.hide {
+    display: none;
 }
