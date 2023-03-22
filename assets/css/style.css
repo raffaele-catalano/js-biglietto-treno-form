@@ -33,7 +33,7 @@ h2 {
     background-color: white;
     border-radius: 15px;
     margin-bottom: 80px;
-    box-shadow: 1px 1px 1px rgba(63, 63, 63, 0.5);
+    box-shadow: 0 0 10px rgba(63, 63, 63, 0.5);
 }
 
 .row {
